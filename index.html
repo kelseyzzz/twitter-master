@@ -11,8 +11,8 @@
 
 	<div>
 		<form name="timeline">
-			Twitter handle: <input name="screen_name" type="text"/>
-			<button type="submit">Get Timeline</button>
+			Twitter handle: <input class="handle" name="screen_name" type="text"/>
+			<button class="timeline" type="submit">Get Timeline</button>
 			<div class="results">
 				<ul>
 				</ul>
@@ -24,8 +24,8 @@
 
 	<div>
 		<form name="search">
-			Query: <input name="q" type="text" />
-			<button type="submit">Quick Search</button>
+			Query: <input class="query-search" name="q" type="text" />
+			<button class="quicky" type="submit">Quick Search</button>
 			<div class="results">
 				<ul>
 				</ul>
@@ -37,15 +37,15 @@
 
 	<div>
 		<form name="search">
-			Query: <input name="q" type="text" />
-			Limit: <input name="count" type="number" />
+			Query: <input class="query-2" name="q" type="text" />
+			Limit: <input class="limit" name="count" type="number" />
 			Result Type:
-			<select name="result_type">
+			<select name="result_type" class="result_type">
 				<option value="mixed">Default</option>
 				<option value="popular">Most popular</option>
 				<option value="recent">Most recent</option>
 			</select>
-			<button type="submit">Custom Search</button>
+			<button class="custom" type="submit">Custom Search</button>
 			<div class="results">
 				<ul>
 				</ul>
@@ -54,6 +54,8 @@
 	</div>
 
 	<hr/>
+
+	<div class="tweets"></div>
 
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
