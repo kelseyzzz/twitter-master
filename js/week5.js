@@ -104,7 +104,7 @@ var RegexModule = (function(){
 	}
 
 	function highlightWord(data, keyword){
-		 var searchWord = new RegExp(keyword, "gi");
+		 var searchWord = new RegExp("(" + keyword + ")", "gi");
 		 console.log(searchWord);
 
 		 
