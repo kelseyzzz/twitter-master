@@ -84,6 +84,53 @@ var TwitterApi = (function(options) {
 	return shared;
 }());
 
+
+
+// var GoogleModule = (function{
+// 		var shared = {};
+
+// 	function placeMarker() {
+
+// 		var markers = [];
+       
+//         searchBox.addListener('places_changed', function() {
+//           var places = searchBox.getPlaces();
+
+//           if (places.length == 0) {
+//           	return;
+//           }
+
+//           markers.forEach(function(marker) {
+//           	marker.setMap(null);
+//           });
+
+// 	}
+
+// 	function createInfoWindow() {
+
+// 	}
+
+// 	function init() {
+
+// 	}
+
+// 	shared = {
+// 		mark: creatMarker
+// 		init: getAt,
+// 		hash: getHash,
+// 		word: highlightWord
+
+		
+// 	}
+
+// 	return shared
+
+
+// }
+
+
+
+
 var RegexModule = (function(){
 	var shared = {};
 
@@ -95,13 +142,15 @@ var RegexModule = (function(){
 	var getAt = function(data) {
 		var atRegex = /(^|\W)(@[a-z\d][\w-]*)/ig;
 
-		return data.replace(atRegex, "<a class='at' href='$2'> $2 </a>")
+		return data.replace(atRegex, "<a class='at' href='https://twitter.com/$2'> $2 </a>")
 	}
 	var getHash = function(data) {
 		var hashRegex = /(^|\W)(#[a-z\d][\w-]*)/ig;
 
 		return data.replace(hashRegex, "<a class'hash' href='$3'> $2 </a>")
 	}
+
+
 
 	function highlightWord(data, keyword){
 		 var searchWord = new RegExp("(" + keyword + ")", "gi");
@@ -126,5 +175,32 @@ var RegexModule = (function(){
 	return shared
 
 })();
+
+
+var GoogleModule = (function()) {
+	var shared = {};
+
+	// var getGoogle = function(data) {
+	// 	var googleRegex = /(^|\W)(@[a-z\d][\w-]*)/ig;
+
+	// 	return data.replace(googleRegex, "<a class='at' href='$2'> $2 </a>")
+	// }
+
+
+
+
+	shared = {
+
+	}
+
+	return shared
+
+
+})();
+
+
+
+
+
 
 TwitterApi.init();
